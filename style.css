@@ -7,12 +7,34 @@ body {
 
   /* Üst Kısım (Header) */
   header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #696969; 
     color: white;
     padding: 20px;
-    text-align: center;
     font-size: 24px;
     font-weight: bold;
+  }
+
+  header div {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    gap: 25px; /* Boşluk arttırıldı */
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #b77272;
+    font-size: 20px;
+  }
+
+  nav a:hover {
+    text-decoration: underline; 
   }
 
   /* İçerik Alanı */
@@ -21,14 +43,10 @@ body {
     text-align: center;
   }
 
-
-  /* Footer */
-  footer {
-    background-color: #f1f1f1;
-    color: #333;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 14px;
+  #rotalar-main {
+    padding: 20px;
+    text-align: left; /* Sola yaslı içerik */
+    background-color: #f9f9f9; /* Hafif gri arka plan */
+    border-left: 4px solid #696969; /* Sol tarafa çizgi ekler */
+    line-height: 1.6; /* Satır aralığı */
   }
-
