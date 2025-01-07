@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div>Karaköy Kültür Rotaları</div>
     <nav>
@@ -17,7 +16,6 @@
     </nav>
   </header>
 
-  <!-- Ana İçerik -->
   <main>
     <!-- Canva Embed -->
     <div style="position: relative; width: 80%; height: 0; padding-top: 45%; margin: auto; 
@@ -33,17 +31,15 @@
   </main>
 
   <script>
-    // URL'den sayfa parametresini al
     const params = new URLSearchParams(window.location.search);
     const page = params.get('page');
 
-    // İframe elementini bul
     const iframe = document.getElementById('canva-frame');
 
-    // Sayfa parametresine göre iframe URL'sini güncelle
     if (page) {
       iframe.src = `https://www.canva.com/design/DAGTj2YlBzs/OGmhHYcg8OqULm9QEs3Pug/view?embed#${page}`;
     }
   </script>
 </body>
 </html>
+
