@@ -1,52 +1,189 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Üst Kısım (Header) */
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #696969; 
-    color: white;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-  }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #696969; 
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
 
-  header div {
-    flex-grow: 1;
-    text-align: center;
-  }
+header div {
+  flex-grow: 1;
+  text-align: center; 
+}
 
-  nav {
-    display: flex;
-    gap: 25px; /* Boşluk arttırıldı */
-  }
+nav {
+  display: flex;
+  gap: 25px;
+}
 
-  nav a {
-    text-decoration: none;
-    color: #b77272;
-    font-size: 20px;
-  }
+nav a {
+  text-decoration: none;
+  color: white; 
+  font-size: 20px;
+}
 
-  nav a:hover {
-    text-decoration: underline; 
-  }
+nav a:hover {
+  color: #b77272;
+}
 
-  /* İçerik Alanı */
-  main {
-    padding: 20px;
-    text-align: center;
-  }
+main {
+  padding: 20px;
+  text-align: center;
+}
 
-  #rotalar-main {
-    padding: 20px;
-    text-align: left; /* Sola yaslı içerik */
-    background-color: #f9f9f9; /* Hafif gri arka plan */
-    border-left: 4px solid #696969; /* Sol tarafa çizgi ekler */
-    line-height: 1.6; /* Satır aralığı */
+#rotalar-main {
+  padding: 20px;
+  text-align: left;
+  background-image: url('images/karakoy-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+
+.rota-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+.rota {
+  flex: 1 1 calc(30% - 20px); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.rota:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.rota h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.rota h2 a{
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.rota h2 a:hover{
+  color: #b77272;
+}
+
+.rota ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rota ul li {
+  margin: 7px 0;
+  font-size: 17px;
+}
+
+.rota ul li a {
+  color: black; 
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.rota ul li a:hover {
+  color: #b77272; 
+}
+
+@media (max-width: 768px) {
+  .rota {
+    flex: 1 1 calc(50% - 20px);
   }
+}
+
+@media (max-width: 480px) {
+  .rota {
+    flex: 1 1 100%;
+  }
+}
+
+.title-container {
+  text-align: center; 
+  margin: 20px 0; 
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.title-container h1 {
+  display: inline-block; 
+  font-size: 31px;
+}
+
+.title-container h1 a {
+  color: black; 
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+}
+
+.title-container h1 a:hover {
+  color: #b77272; 
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.contact-info h2{
+  font-size: 30px;
+}
+
+.contact-item {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.contact-item:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.contact-item h3 {
+  margin: 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.contact-item p {
+  margin: 5px 0;
+}
+
+.contact-item a {
+  color: #b77272;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+ 
